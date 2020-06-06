@@ -1,7 +1,7 @@
 package br.unicamp.ic.inf300.sort;
 
 
-public class QuickSort  {
+public class QuickSort extends Sorter  {
     private int[] numbers;
     private int number;
 
