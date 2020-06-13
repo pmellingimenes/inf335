@@ -43,7 +43,11 @@ class StackArrayTest {
 
 	@Test
 	void testIsEmpty() {
-		fail("Not yet implemented");
+		assertEquals(true, stackArray.isEmpty());
+		stackArray.push(654);
+		assertEquals(false, stackArray.isEmpty());
+		stackArray.pop();
+		assertEquals(true, stackArray.isEmpty());
 	}
 
 	@Test
