@@ -39,6 +39,8 @@ class StackArrayTest {
 		assertEquals(secondValue, stackArray.peek());
 		stackArray.push(thirdValue);
 		assertEquals(thirdValue, stackArray.peek());
+		stackArray.pop();
+		assertEquals(secondValue, stackArray.peek());
 	}
 
 	@Test
