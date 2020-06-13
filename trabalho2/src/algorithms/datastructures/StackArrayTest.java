@@ -30,6 +30,7 @@ class StackArrayTest {
 
 	@Test
 	void testPeek() {
+		assertEquals(-1, stackArray.peek());
 		int firstValue = 1;
 		int secondValue = 2;
 		int thirdValue = 243;
