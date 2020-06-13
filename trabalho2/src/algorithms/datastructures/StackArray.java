@@ -80,7 +80,7 @@ public class StackArray {
 			resize(maxSize / 2);
 			return pop();// don't forget pop after resizing
 		} else {
-			// System.out.println("The stack is already empty");
+			System.out.println("The stack is already empty");
 			return -1;
 		}
 	}
@@ -94,7 +94,7 @@ public class StackArray {
 		if (!isEmpty()) { // Checks for an empty stack
 			return stackArray[top];
 		} else {
-			// System.out.println("The stack is empty, cant peek");
+			System.out.println("The stack is empty, cant peek");
 			return -1;
 		}
 	}
@@ -116,7 +116,7 @@ public class StackArray {
 	 * @return true if the stack is empty
 	 */
 	public boolean isEmpty() {
-		return (size() == 0);
+		return (top == -1);
 	}
 
 	/**
@@ -125,11 +125,7 @@ public class StackArray {
 	 * @return true if the stack is full
 	 */
 	public boolean isFull() {
-		return (size() == maxSize);
-	}
-
-	public int getMaxSize() {
-		return maxSize;
+		return (top + 1 == maxSize);
 	}
 
 	/**
@@ -137,10 +133,14 @@ public class StackArray {
 	 *
 	 * @return the number of elements in the stack
 	 */
+
 	public int size() {
 		return top + 1;
 	}
 
+	public int getMaxSize () {
+		return maxSize;
+	}
 	/**
 	 * Deletes everything in the Stack
 	 * <p>

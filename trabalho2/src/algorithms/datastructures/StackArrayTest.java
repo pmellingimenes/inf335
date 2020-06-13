@@ -17,10 +17,12 @@ class StackArrayTest {
 		assertEquals(secondValue, stackArray.peek());
 		assertEquals(2, stackArray.size());
 		stackArray.makeEmpty();
-		for (int i = 0; i <= stackArray.getMaxSize() + 1; i++) {
+		for (int i = 0; i < stackArray.getMaxSize(); i++) {
 			stackArray.push(i);
 		}
-		assertEquals(2, stackArray.getMaxSize() + 1);
+		int outOffLimitValue = 65;
+		stackArray.push(outOffLimitValue);
+		assertEquals(outOffLimitValue, stackArray.peek());
 	}
 
 	@Test
@@ -61,7 +63,7 @@ class StackArrayTest {
 	@Test
 	void testIsFull() {
 		assertEquals(false, stackArray.isFull());
-		for (int i = 0; i <= stackArray.getMaxSize(); i++) {
+		for (int i = 0; i < stackArray.getMaxSize(); i++) {
 			stackArray.push(i);
 		}
 		assertEquals(true, stackArray.isFull());
@@ -72,7 +74,7 @@ class StackArrayTest {
 	@Test
 	void testSize() {
 		assertEquals(0, stackArray.size());
-		for (int i = 0; i <= stackArray.getMaxSize(); i++) {
+		for (int i = 0; i < stackArray.getMaxSize(); i++) {
 			stackArray.push(i);
 		}
 		assertEquals(stackArray.getMaxSize(), stackArray.size());
@@ -82,7 +84,7 @@ class StackArrayTest {
 
 	@Test
 	void testMakeEmpty() {
-		for (int i = 0; i <= stackArray.getMaxSize(); i++) {
+		for (int i = 0; i < stackArray.getMaxSize(); i++) {
 			stackArray.push(i);
 		}
 		stackArray.makeEmpty();
