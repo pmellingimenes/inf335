@@ -1,34 +1,44 @@
 package algorithms.datastructures;
 
 import static org.junit.jupiter.api.Assertions.*;
-
 import org.junit.jupiter.api.Test;
 
 class StackArrayTest {
-
-	@Test
-	void testStackArray() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	void testStackArrayInt() {
-		fail("Not yet implemented");
-	}
+	private final StackArray stackArray = new StackArray();
 
 	@Test
 	void testPush() {
-		fail("Not yet implemented");
+		int firstValue = 1;
+		int secondValue = 2;
+		stackArray.push(firstValue);
+		assertEquals(1, stackArray.size());
+		assertEquals(firstValue, stackArray.peek());
+		stackArray.push(secondValue);
+		assertEquals(secondValue, stackArray.peek());
+		assertEquals(2, stackArray.size());
 	}
 
 	@Test
 	void testPop() {
-		fail("Not yet implemented");
+		int firstValue = 1;
+		int secondValue = 2;
+		stackArray.push(firstValue);
+		stackArray.push(secondValue);
+		assertEquals(secondValue, stackArray.pop());
+		assertEquals(firstValue, stackArray.pop());
 	}
 
 	@Test
 	void testPeek() {
-		fail("Not yet implemented");
+		int firstValue = 1;
+		int secondValue = 2;
+		int thirdValue = 243;
+		stackArray.push(firstValue);
+		assertEquals(firstValue, stackArray.peek());
+		stackArray.push(secondValue);
+		assertEquals(secondValue, stackArray.peek());
+		stackArray.push(thirdValue);
+		assertEquals(thirdValue, stackArray.peek());
 	}
 
 	@Test
