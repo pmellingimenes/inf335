@@ -16,6 +16,11 @@ class StackArrayTest {
 		stackArray.push(secondValue);
 		assertEquals(secondValue, stackArray.peek());
 		assertEquals(2, stackArray.size());
+		stackArray.makeEmpty();
+		for (int i = 0; i <= stackArray.getMaxSize() + 1; i++) {
+			stackArray.push(i);
+		}
+		assertEquals(2, stackArray.getMaxSize() + 1);
 	}
 
 	@Test
