@@ -128,6 +128,10 @@ public class StackArray {
 		return (size() == maxSize);
 	}
 
+	public int getMaxSize() {
+		return maxSize;
+	}
+
 	/**
 	 * Returns the number of elements in the stack
 	 *

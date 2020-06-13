@@ -52,77 +52,32 @@ class StackArrayTest {
 
 	@Test
 	void testIsFull() {
-		fail("Not yet implemented");
+		assertEquals(false, stackArray.isFull());
+		for (int i = 0; i <= stackArray.getMaxSize(); i++) {
+			stackArray.push(i);
+		}
+		assertEquals(true, stackArray.isFull());
+		stackArray.pop();
+		assertEquals(false, stackArray.isFull());
 	}
 
 	@Test
 	void testSize() {
-		fail("Not yet implemented");
+		assertEquals(0, stackArray.size());
+		for (int i = 0; i <= stackArray.getMaxSize(); i++) {
+			stackArray.push(i);
+		}
+		assertEquals(stackArray.getMaxSize(), stackArray.size());
+		stackArray.pop();
+		assertEquals(stackArray.getMaxSize() - 1, stackArray.size());
 	}
 
 	@Test
 	void testMakeEmpty() {
-		fail("Not yet implemented");
+		for (int i = 0; i <= stackArray.getMaxSize(); i++) {
+			stackArray.push(i);
+		}
+		stackArray.makeEmpty();
+		assertEquals(true, stackArray.isEmpty());
 	}
-
-	@Test
-	void testObject() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	void testGetClass() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	void testHashCode() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	void testEquals() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	void testClone() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	void testToString() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	void testNotify() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	void testNotifyAll() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	void testWaitLong() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	void testWaitLongInt() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	void testWait() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	void testFinalize() {
-		fail("Not yet implemented");
-	}
-
 }
