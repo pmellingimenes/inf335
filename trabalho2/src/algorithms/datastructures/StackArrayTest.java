@@ -1,3 +1,12 @@
+/**
+* Testes unitários para fins didáticos para a aula do Prof. Leonardo Montecchi
+* INF 335
+*
+* @author Caroline Augusti R.G. 50466131-0
+* @author Paulo Mellin Gimenes R.G. 30280035-9
+* @version 1.0
+* @since   2020-06-13 
+*/
 package algorithms.datastructures;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -18,7 +27,7 @@ class StackArrayTest {
 		for (int i = 0; i < stackArray.getMaxSize(); i++) {
 			stackArray.push(i);
 		}
-		assertEquals(stackArray.getMaxSize() -1, stackArray.peek());
+		assertEquals(stackArray.getMaxSize() - 1, stackArray.peek());
 	}
 
 	@Test
@@ -91,19 +100,17 @@ class StackArrayTest {
 	void IsFull_noInteractions() {
 		assertEquals(false, stackArray.isFull());
 	}
-	
+
 	@Test
 	void IsFull_pushAllPositions() {
-		assertEquals(false, stackArray.isFull());
 		for (int i = 0; i < stackArray.getMaxSize(); i++) {
 			stackArray.push(i);
 		}
 		assertEquals(true, stackArray.isFull());
 	}
-	
+
 	@Test
 	void IsFull_pushAllPositionsAndPop() {
-		assertEquals(false, stackArray.isFull());
 		for (int i = 0; i < stackArray.getMaxSize(); i++) {
 			stackArray.push(i);
 		}
@@ -112,8 +119,12 @@ class StackArrayTest {
 	}
 
 	@Test
-	void testSize_afterPusshAllPositions() {
+	void testSize_withNoInteration() {
 		assertEquals(0, stackArray.size());
+	}
+
+	@Test
+	void testSize_afterPusshAllPositions() {
 		for (int i = 0; i < stackArray.getMaxSize(); i++) {
 			stackArray.push(i);
 		}
