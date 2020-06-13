@@ -18,9 +18,7 @@ class StackArrayTest {
 		for (int i = 0; i < stackArray.getMaxSize(); i++) {
 			stackArray.push(i);
 		}
-		int outOffLimitValue = 65;
-		stackArray.push(outOffLimitValue);
-		assertEquals(outOffLimitValue, stackArray.peek());
+		assertEquals(stackArray.getMaxSize() -1, stackArray.peek());
 	}
 
 	@Test
